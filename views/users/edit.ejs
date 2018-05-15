@@ -51,12 +51,18 @@
             <label for="exampleInputphone">Phone:</label>
             <input type="text" name= "phone" value="<%= user.phone %>" class="form-control" id="phone" aria-describedby="emailHelp">
           </div>
-          <button id="updateButton" type="update" class="btn btn-success mxy-5">Update</button>
+          <a id="updateButton" href="javascript:delay('/users')" class="btn btn-success mxy-5">Update</a>
         </form>      
       </div>
 
 
   </div>
 </body>
+
+<script>
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 1000 );
+}
+</script>
 
 </html>

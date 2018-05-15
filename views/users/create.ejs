@@ -51,10 +51,16 @@
         <label for="exampleInputphone">Phone:</label>
         <input type="text" name= "phone" class="form-control" id="phone" aria-describedby="emailHelp">
       </div>
-      <button id="createButton" type="submit" class="btn btn-success mxy-5">Submit</button>
+      <a id="createButton" href="javascript:delay('/users')" class="btn btn-success mxy-5">Submit</a>
     </form>      
   </div>
 
 </body>
+
+<script>
+  function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1000 );
+  }
+  </script>
 
 </html>
