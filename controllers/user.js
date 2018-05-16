@@ -13,6 +13,16 @@ userController.list = function(req, res) {
   });
 };
 
+userController.detail = function (req, res) {
+  User.findOne({ _id: req.params.id }).exec(function (err, user) {
+    if (err) {
+      console.log("Error:", err);
+    } else {
+      res.render("users/detail", { user });
+    }
+  });
+};
+
 userController.edit = function(req, res) {
   const userId = req.params.id;
 
